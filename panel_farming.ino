@@ -33,11 +33,11 @@ void loop() {
   if(Serial.available() > 0){ // pour tester la comunication
     delay(100);
     if(Serial.available() >= 4){
-      if(Serial.read() == 112){
+      if(Serial.read() == 112){ // verifie que "ping" est reçut (pas prope mais fonctionelle)
         if(Serial.read() == 105){
           if(Serial.read() == 110){
             if(Serial.read() == 103){
-              Serial.println("pong");
+              Serial.println("pong"); // renvoie "pong"
             }
           }
         }
